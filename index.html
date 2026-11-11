@@ -67,11 +67,11 @@
     font-family: var(--display);
     font-weight: 750;
     font-stretch: 80%;
-    font-size: clamp(3.25rem, 10.5vw, 8.25rem);
-    line-height: 0.88;
+    font-size: clamp(2.5rem, 13vw, 6.5rem);
+    line-height: 0.95;
+    white-space: nowrap;
     letter-spacing: -0.025em;
   }
-  .hero h1 span { display: block; }
   .hero .lede {
     margin-top: 1.75rem;
     max-width: 34rem;
@@ -219,7 +219,6 @@
   }
   @media (max-width: 600px) {
     body { font-size: 1.0625rem; }
-    .hero h1 { font-size: 4.25rem; }
     .row { grid-template-columns: minmax(0, 1fr); }
     .row > .k { margin-bottom: 0.15rem; }
     .pub .role { margin-left: 0; display: inline-block; margin-top: 0.35rem; }
@@ -241,7 +240,7 @@
 
 <header class="hero">
   <div class="hero-inner">
-    <h1><span>MD Fajla</span><span>Rabbi</span></h1>
+    <h1>MD Fajla Rabbi</h1>
     <p class="lede">PhD student in mechanical engineering at Clemson University. <span class="place">Clemson, South Carolina.</span></p>
     <nav class="contact" aria-label="Contact and profiles">
       <a class="cv" href="MD_Fajla_Rabbi_CV.pdf">Download CV (PDF)</a>
