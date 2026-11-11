@@ -1,134 +1,465 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> MD Fajla Rabbi</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      line-height: 1.6;
-      color: #222;
-      background: #f9f9f9;
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MD Fajla Rabbi | Mechanical engineering PhD student, Clemson University</title>
+<meta name="description" content="MD Fajla Rabbi is a PhD student in mechanical engineering at Clemson University. Research on electrospun nanofiber membranes and triboelectric nanogenerators.">
+<meta name="author" content="MD Fajla Rabbi">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="MD Fajla Rabbi">
+<meta property="og:description" content="PhD student in mechanical engineering at Clemson University. Electrospun nanofiber membranes and triboelectric nanogenerators.">
+<meta name="theme-color" content="#F2F4F3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131B23" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%2316212B'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='20' fill='%23F2F4F3'%3ER%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F2F4F3;
+    --ink: #16212B;
+    --muted: #586570;
+    --rule: #D2D8DB;
+    --accent: #2B44D9;
+    --mark: #E3E8FB;
+    --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+    --text: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+    --gutter: 8rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131B23;
+      --ink: #E4E9EC;
+      --muted: #98A5AF;
+      --rule: #2B3743;
+      --accent: #A3B4FF;
+      --mark: #232F4F;
     }
+  }
 
-    .container {
-      background: white;
-      padding: 35px;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--text);
+    font-size: 1.125rem;
+    line-height: 1.62;
+    font-optical-sizing: auto;
+  }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+  a:hover { text-decoration-thickness: 2px; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  sub, sup { line-height: 0; }
+  ul { margin: 0; padding: 0; list-style: none; }
+  p { margin: 0; }
 
-    h1 {
-      margin-bottom: 5px;
-      color: #1a1a1a;
-    }
+  /* ---------- Header ---------- */
+  .hero-inner {
+    max-width: 76rem;
+    margin: 0 auto;
+    padding: clamp(3.5rem, 9vw, 7rem) clamp(1.25rem, 5vw, 4rem) clamp(2.5rem, 5vw, 3.5rem);
+  }
+  .hero h1 {
+    margin: 0;
+    font-family: var(--display);
+    font-weight: 750;
+    font-stretch: 80%;
+    font-size: clamp(3.25rem, 10.5vw, 8.25rem);
+    line-height: 0.88;
+    letter-spacing: -0.025em;
+  }
+  .hero h1 span { display: block; }
+  .hero .lede {
+    margin-top: 1.75rem;
+    max-width: 34rem;
+    font-size: clamp(1.15rem, 1.6vw, 1.35rem);
+    line-height: 1.45;
+  }
+  .hero .place { color: var(--muted); }
+  .contact {
+    margin-top: 2rem;
+    display: flex; flex-wrap: wrap; align-items: center;
+    gap: 0.6rem 1.6rem;
+    font-family: var(--display);
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .contact .cv {
+    background: var(--ink);
+    color: var(--bg);
+    text-decoration: none;
+    padding: 0.6rem 1.1rem;
+    border-radius: 3px;
+    font-weight: 650;
+  }
+  .contact .cv:hover { background: var(--accent); }
+  .hero-rule {
+    max-width: 76rem;
+    margin: 0 auto;
+    padding: 0 clamp(1.25rem, 5vw, 4rem);
+  }
+  .hero-rule hr { border: 0; border-top: 1px solid var(--rule); margin: 0; }
 
-    h2 {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
-      margin-top: 30px;
-      color: #333;
-    }
+  /* ---------- Body layout ---------- */
+  .layout {
+    max-width: 76rem;
+    margin: 0 auto;
+    padding: clamp(2.5rem, 5vw, 3.5rem) clamp(1.25rem, 5vw, 4rem) 4rem;
+    display: grid;
+    grid-template-columns: 10rem minmax(0, 50rem);
+    column-gap: clamp(2rem, 6vw, 6rem);
+  }
+  .toc {
+    position: sticky;
+    top: 2.5rem;
+    align-self: start;
+    font-family: var(--display);
+    font-size: 0.98rem;
+  }
+  .toc li + li { margin-top: 0.45rem; }
+  .toc a {
+    color: var(--muted);
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.1rem 0;
+    border-bottom: 2px solid transparent;
+  }
+  .toc a:hover { color: var(--ink); }
+  .toc a[aria-current="true"] { color: var(--ink); font-weight: 650; border-bottom-color: var(--accent); }
 
-    .contact {
-      color: #555;
-      margin-bottom: 25px;
-    }
+  main > section + section {
+    margin-top: clamp(3.5rem, 7vw, 5.5rem);
+    padding-top: clamp(2.25rem, 4vw, 3rem);
+    border-top: 1px solid var(--rule);
+  }
+  main section { scroll-margin-top: 1.5rem; }
+  h2 {
+    margin: 0 0 1.75rem;
+    font-family: var(--display);
+    font-weight: 700;
+    font-stretch: 85%;
+    font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+  }
+  h3 {
+    margin: 0;
+    font-family: var(--display);
+    font-weight: 650;
+    font-size: 1.2rem;
+    line-height: 1.3;
+  }
+  .sub { color: var(--muted); }
 
-    .item {
-      margin-bottom: 18px;
-    }
+  /* A row is a label in the gutter (a year, a category) and its content */
+  .row {
+    display: grid;
+    grid-template-columns: var(--gutter) minmax(0, 1fr);
+    column-gap: 1.5rem;
+  }
+  .row + .row { margin-top: 1.9rem; }
+  .row > .k {
+    font-family: var(--display);
+    font-size: 0.98rem;
+    font-weight: 500;
+    line-height: 1.75;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .tight .row + .row { margin-top: 1.15rem; }
 
-    .item-title {
-      font-weight: bold;
-    }
+  .points { margin-top: 0.9rem; }
+  .points li { position: relative; padding-left: 1.25rem; }
+  .points li + li { margin-top: 0.6rem; }
+  .points li::before {
+    content: "";
+    position: absolute; left: 0; top: 0.72em;
+    width: 0.55rem; height: 1px;
+    background: var(--muted);
+  }
 
-    .date {
-      color: #666;
-      font-size: 0.95em;
-    }
+  /* Publications */
+  .pub h3 { font-family: var(--text); font-weight: 600; font-size: 1.22rem; line-height: 1.35; }
+  .pub h3 a { color: var(--ink); text-decoration-color: var(--rule); }
+  .pub h3 a:hover { color: var(--accent); text-decoration-color: currentColor; }
+  .pub .authors { margin-top: 0.4rem; color: var(--muted); font-size: 1.02rem; }
+  .pub .authors b { color: var(--ink); font-weight: 600; }
+  .pub .venue { margin-top: 0.15rem; font-size: 1.02rem; }
+  .pub .role {
+    font-family: var(--display);
+    font-size: 0.86rem;
+    font-weight: 600;
+    background: var(--mark);
+    color: var(--accent);
+    padding: 0.12rem 0.5rem;
+    border-radius: 3px;
+    margin-left: 0.5rem;
+    white-space: nowrap;
+  }
 
-    a {
-      color: #0366d6;
-      text-decoration: none;
-    }
+  .lead { font-size: 1.3rem; line-height: 1.5; }
+  .lead + p { margin-top: 1rem; }
 
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  footer {
+    max-width: 76rem;
+    margin: 0 auto;
+    padding: 2rem clamp(1.25rem, 5vw, 4rem) 3rem;
+    font-family: var(--display);
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+  footer p { border-top: 1px solid var(--rule); padding-top: 1.5rem; }
+
+  @media (max-width: 860px) {
+    .layout { grid-template-columns: minmax(0, 1fr); }
+    .toc { display: none; }
+  }
+  @media (max-width: 600px) {
+    body { font-size: 1.0625rem; }
+    .hero h1 { font-size: 4.25rem; }
+    .row { grid-template-columns: minmax(0, 1fr); }
+    .row > .k { margin-bottom: 0.15rem; }
+    .pub .role { margin-left: 0; display: inline-block; margin-top: 0.35rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+  @media print {
+    .toc, .contact .cv, .hero-rule { display: none; }
+    .hero-inner { padding: 0 0 1rem; }
+    .hero h1 { font-size: 3rem; }
+    .contact a { color: #000; }
+    .layout { display: block; padding-top: 1rem; }
+    body { background: #fff; color: #000; font-size: 11pt; }
+  }
+</style>
 </head>
-
 <body>
-  <div class="container">
-    <h1> MD Fajla Rabbi</h1>
-    <p class="contact">
-      PhD Researcher | Mechanical Engineering | Energy Harvesting | Machine Learning<br>
-      Email: rabbi.fz.me@gmail.com |
-      GitHub: <a href=" https://github.com/mdfajlarabbi"> mdfajlarabbi</a> |
-      LinkedIn: <a href="#">https://www.linkedin.com/in/mdfajla-rabbi/</a>
-    </p>
 
-    <h2>Profile</h2>
-    <p>
-      I am a researcher working on electrospun nanofiber membranes, triboelectric nanogenerators,
-      energy harvesting systems, and machine-learning-based analysis. My research interests include
-      advanced functional materials, self-powered sensors, and AI-assisted engineering systems.
-    </p>
-
-    <h2>Education</h2>
-    <div class="item">
-      <div class="item-title">PhD in Mechanical Engineering</div>
-      <div> Clemson University, USA</div>
-      <div class="date"> 2026 - Present</div>
-    </div>
-
-    <div class="item">
-      <div class="item-title">MSc in Mechanical Engineering</div>
-      <div> University of Ulsan, South Korea</div>
-      <div class="date"> 2023 - 2025</div>
-    </div>
-
-    <h2>Research Interests</h2>
-    <ul>
-      <li>Triboelectric nanogenerators</li>
-      <li>Electrospun nanofiber membranes</li>
-      <li>Energy harvesting and self-powered sensors</li>
-      <li>Machine learning and computer vision</li>
-      <li>Material characterization and device fabrication</li>
-    </ul>
-
-    <h2>Selected Publications</h2>
-    <div class="item">
-      <div class="item-title">Article Title Here</div>
-      <div>Author names, Journal Name, Year</div>
-    </div>
-
-    <div class="item">
-      <div class="item-title">Conference Paper Title Here</div>
-      <div>Conference Name, Year</div>
-    </div>
-
-    <h2>Technical Skills</h2>
-    <ul>
-      <li>Fabrication: Electrospinning, nanocomposite membrane preparation, device prototyping</li>
-      <li>Characterization: SEM, XRD, FTIR, AFM, contact angle, dielectric analysis</li>
-      <li>Simulation: COMSOL, MATLAB/Simulink</li>
-      <li>Programming: Python, MATLAB, PyTorch, OpenCV</li>
-    </ul>
-
-    <h2>Projects</h2>
-    <div class="item">
-      <div class="item-title">PVDF/TiO₂ Triboelectric Nanogenerator</div>
-      <p>
-        Developed electrospun PVDF-based nanocomposite membranes for liquid-solid triboelectric
-        energy harvesting and self-powered sensing applications.
-      </p>
-       </div>
+<header class="hero">
+  <div class="hero-inner">
+    <h1><span>MD Fajla</span><span>Rabbi</span></h1>
+    <p class="lede">PhD student in mechanical engineering at Clemson University. My research is on electrospun nanofiber membranes and triboelectric nanogenerators. <span class="place">Clemson, South Carolina.</span></p>
+    <nav class="contact" aria-label="Contact and profiles">
+      <a class="cv" href="MD_Fajla_Rabbi_CV.pdf">Download CV (PDF)</a>
+      <a href="mailto:mdfajlr@clemson.edu">mdfajlr@clemson.edu</a>
+      <a href="https://scholar.google.com/citations?user=oemDvMEAAAAJ&amp;hl=en">Google Scholar</a>
+      <a href="https://www.linkedin.com/in/mdfajla-rabbi">LinkedIn</a>
+      <a href="https://github.com/mdfajlarabbi">GitHub</a>
+    </nav>
   </div>
+  <div class="hero-rule"><hr></div>
+</header>
+
+<div class="layout">
+  <nav class="toc" aria-label="Sections">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#industry">Industry</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#awards">Awards</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="about" aria-label="About">
+      <p class="lead">I started my PhD in mechanical engineering at Clemson University in fall 2026. For my master's at the University of Ulsan I made electrospun TiO<sub>2</sub>-PVDF membranes and built liquid-solid triboelectric nanogenerators from them.</p>
+      <p>Before graduate school I was a project engineer on a 400 TPD vinyl chloride monomer plant, where I worked through installation, commissioning, and startup.</p>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+
+      <article class="row pub">
+        <div class="k">2026</div>
+        <div>
+          <h3><a href="https://doi.org/10.1002/adma.202522834">Recent Advances in Electrospun Nanofibers for Triboelectric Nanogenerators: Performance Enhancement Strategies and Emerging Applications</a></h3>
+          <p class="authors"><b>MD Fajla Rabbi</b>, J. H. Ahn, Duy Linh Vu, Kyoung Kwan Ahn</p>
+          <p class="venue"><i>Advanced Materials</i> <span class="role">Review, first author</span></p>
+        </div>
+      </article>
+
+      <article class="row pub">
+        <div class="k">2025</div>
+        <div>
+          <h3><a href="https://doi.org/10.1016/j.jallcom.2025.182531">Electrospun TiO<sub>2</sub>–PVDF Nanocomposite Membranes for High-Performance Liquid–Solid Triboelectric Nanogenerators with Cascaded Architecture</a></h3>
+          <p class="authors"><b>MD Fajla Rabbi</b>, Duy Linh Vu, Kyoung Kwan Ahn</p>
+          <p class="venue"><i>Journal of Alloys and Compounds</i> <span class="role">First author</span></p>
+        </div>
+      </article>
+
+      <article class="row pub">
+        <div class="k">2025</div>
+        <div>
+          <h3><a href="https://doi.org/10.3390/en18215709">Direct vs. Indirect Charge Transfer: A Paradigm Shift in Phase-Spanning Triboelectric Nanogenerators Focused on Liquid and Gas Interfaces</a></h3>
+          <p class="authors">J. H. Ahn, Q. T. Nguyen, T. B. T. Nguyen, <b>M. F. Rabbi</b>, V. H. Nguyen, Y. H. Lee, K. K. Ahn</p>
+          <p class="venue"><i>Energies</i></p>
+        </div>
+      </article>
+
+      <article class="row pub">
+        <div class="k">2024</div>
+        <div>
+          <h3>Self-Powered Acid Rain Sensor Based on Triboelectric Nanogenerator Made of Electrospun TiO<sub>2</sub>-PVDF Composite Film</h3>
+          <p class="authors"><b>MD Fajla Rabbi</b>, Kyoung Kwan Ahn</p>
+          <p class="venue">27th International Conference on Mechatronics Technology (ICMT), Kanazawa, Japan <span class="role">Conference</span></p>
+        </div>
+      </article>
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+      <h3>Graduate research assistant, FPMI Lab</h3>
+      <p class="sub">Department of Mechanical Engineering, University of Ulsan. Advisor: <a href="https://scholar.google.com/citations?user=G0KPaz8AAAAJ&amp;hl=en">Prof. Kyoung Kwan Ahn</a></p>
+      <ul class="points">
+        <li>Fabricated electrospun TiO<sub>2</sub>-PVDF nanocomposite membranes to optimize β-phase content, surface roughness, and surface charge density for liquid-solid triboelectric nanogenerator (TENG) devices.</li>
+        <li>Characterized β-phase content using XRD (Rigaku Ultima IV) and FTIR (Thermo Fisher Nicolet iS5), morphology using FE-SEM (JEOL JSM-7600) with EDS mapping, and surface roughness using AFM (MFP-3D).</li>
+        <li>Measured membrane hydrophobicity by water contact angle using a SmartDrop analyzer (FemtoFAB), and dielectric constant using an Agilent 4294A precision impedance analyzer.</li>
+        <li>Built droplet-based liquid-solid TENG devices and designed a 3D-printed cascaded structure with two stacked membranes.</li>
+        <li>Measured open-circuit voltage (V<sub>oc</sub>), short-circuit current (I<sub>sc</sub>), and transferred charge using a Keithley DMM7510 digital multimeter.</li>
+        <li>Wrote a first-author review on electrospun nanofibers for TENGs (<i>Advanced Materials</i>, 2026).</li>
+      </ul>
+    </section>
+
+    <section id="industry">
+      <h2>Industry</h2>
+      <div class="row">
+        <div class="k">2019–2022</div>
+        <div>
+          <h3>Project engineer, MPVC Limited</h3>
+          <p class="sub">Process licensor: Oxy Vinyls LP, Texas</p>
+          <ul class="points">
+            <li>Worked on installation, commissioning, and mechanical completion of a 400 TPD vinyl chloride monomer (VCM) plant, including an EDC cracking furnace (Heurtey Petrochem) and an incineration unit (John Zink).</li>
+            <li>Installed and commissioned a 20,000 m<sup>3</sup> cryogenic ethylene storage tank with three BOG compressors and a propylene refrigeration unit, and a 100 TPD cryogenic air separation unit (Linde).</li>
+            <li>Handled equipment and piping in SS 304, 310, and 316L, Incoloy, duplex stainless steel, and Monel; checked material certificates and traceability.</li>
+            <li>Coordinated radiographic (RT) and dye penetrant (PT) testing of welds and tracked repairs and re-examination.</li>
+            <li>Basic working knowledge of ASTM material standards and ASME/API codes for pressure vessels and storage tanks.</li>
+            <li>Took part in pre-commissioning of piping and equipment, including line flushing, leak testing, and no-load run tests of pumps and compressors.</li>
+            <li>Supported plant startup by checking equipment during the first operating runs and helping fix mechanical issues such as leaks, vibration, and seal failures.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="tight">
+      <h2>Skills</h2>
+      <div class="row">
+        <div class="k">Fabrication</div>
+        <p>Electrospinning (Inovenso NanoSpinner NS+), blade coating</p>
+      </div>
+      <div class="row">
+        <div class="k">Electrical</div>
+        <p>Open-circuit voltage (V<sub>oc</sub>), short-circuit current (I<sub>sc</sub>), and charge transfer of TENGs using a Keithley DMM7510; frequency-dependent dielectric constant (Agilent 4294A impedance analyzer)</p>
+      </div>
+      <div class="row">
+        <div class="k">Materials</div>
+        <p>FE-SEM (JEOL JSM-7600), AFM (MFP-3D), XRD (Rigaku Ultima IV), FTIR (Thermo Fisher Nicolet iS5), water contact angle (FemtoFAB SmartDrop), and optical microscopy</p>
+      </div>
+      <div class="row">
+        <div class="k">Simulation</div>
+        <p>COMSOL Multiphysics (TENG electrostatic modeling); ANSYS Fluent (thermal analysis of PCM-based heat sinks)</p>
+      </div>
+      <div class="row">
+        <div class="k">Programming</div>
+        <p>Python (PEMFC stack model: activation, ohmic, and concentration polarization losses); MATLAB</p>
+      </div>
+      <div class="row">
+        <div class="k">Design</div>
+        <p>SolidWorks, Autodesk Inventor, and 3D printing</p>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="row">
+        <div class="k">2026–now</div>
+        <div>
+          <h3>PhD in Mechanical Engineering</h3>
+          <p class="sub">Clemson University</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="k">2023–2025</div>
+        <div>
+          <h3>M.Sc. in Mechanical Engineering</h3>
+          <p class="sub">University of Ulsan. GPA 4.36/4.50</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="k">2015–2019</div>
+        <div>
+          <h3>B.Sc. in Mechanical Engineering</h3>
+          <p class="sub">Khulna University of Engineering &amp; Technology. CGPA 3.00/4.00</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="teaching">
+      <h2>Teaching</h2>
+      <div class="row">
+        <div class="k">2026–now</div>
+        <div>
+          <h3>Graduate laboratory assistant, ME 4440</h3>
+          <p class="sub">Mechanical Engineering Laboratory III, Clemson University</p>
+          <p style="margin-top:0.6rem">Lab topics: vibration modal analysis, mass-pendulum system, PLC security system, convective heat transfer, and fatigue testing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="awards" class="tight">
+      <h2>Awards</h2>
+      <div class="row">
+        <div class="k">2023–2025</div>
+        <div>
+          <h3>BK21 Scholarship</h3>
+          <p class="sub">Government of Korea</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="k">2023–2024</div>
+        <div>
+          <h3>Munsu AF-1 Scholarship</h3>
+          <p class="sub">University of Ulsan</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="k">2017–2018</div>
+        <div>
+          <h3>Department Merit Scholarship</h3>
+          <p class="sub">Khulna University of Engineering &amp; Technology</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <p>MD Fajla Rabbi. Last updated November 2026.</p>
+</footer>
+
+<script>
+/* Side navigation: mark the section being read. */
+(function () {
+  var links = document.querySelectorAll('.toc a');
+  if (!links.length || !('IntersectionObserver' in window)) return;
+  var byId = {};
+  links.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (!en.isIntersecting) return;
+      links.forEach(function (a) { a.removeAttribute('aria-current'); });
+      byId[en.target.id].setAttribute('aria-current', 'true');
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  document.querySelectorAll('main > section').forEach(function (s) { io.observe(s); });
+})();
+</script>
 </body>
 </html>
