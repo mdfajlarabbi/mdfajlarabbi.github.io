@@ -200,6 +200,9 @@
     white-space: nowrap;
   }
 
+  .edu { display: flex; align-items: center; gap: 1rem; }
+  .edu img { flex: none; width: 56px; height: 56px; border-radius: 10px; background: #fff; border: 1px solid var(--rule); object-fit: contain; }
+  @media print { .edu img { width: 36px; height: 36px; } }
   #about p + p { margin-top: 1rem; }
 
   footer {
@@ -277,23 +280,32 @@
       <h2>Education</h2>
       <div class="row">
         <div class="k">2026–now</div>
-        <div>
+        <div class="edu">
+          <img src="logos/clemson.png" alt="Clemson University logo" width="56" height="56" loading="lazy">
+          <div>
           <h3>PhD in Mechanical Engineering</h3>
           <p class="sub">Clemson University</p>
+          </div>
         </div>
       </div>
       <div class="row">
         <div class="k">2023–2025</div>
-        <div>
+        <div class="edu">
+          <img src="logos/ulsan.png" alt="University of Ulsan logo" width="56" height="56" loading="lazy">
+          <div>
           <h3>M.Sc. in Mechanical Engineering</h3>
           <p class="sub">University of Ulsan</p>
+          </div>
         </div>
       </div>
       <div class="row">
         <div class="k">2015–2019</div>
-        <div>
+        <div class="edu">
+          <img src="logos/kuet.png" alt="Khulna University of Engineering &amp; Technology logo" width="56" height="56" loading="lazy">
+          <div>
           <h3>B.Sc. in Mechanical Engineering</h3>
           <p class="sub">Khulna University of Engineering &amp; Technology</p>
+          </div>
         </div>
       </div>
     </section>
