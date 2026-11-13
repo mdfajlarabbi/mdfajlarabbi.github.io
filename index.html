@@ -200,16 +200,16 @@
     white-space: nowrap;
   }
 
-  .edu { display: grid; grid-template-columns: 112px minmax(0, 1fr) auto; column-gap: 1.1rem; align-items: center; }
+  .edu { display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; column-gap: 1.1rem; align-items: center; }
   .edu + .edu { margin-top: 1.6rem; }
-  .edu img { width: 112px; height: 72px; padding: 6px 8px; box-sizing: border-box; border-radius: 10px; background: #fff; border: 1px solid var(--rule); object-fit: contain; }
+  .edu img { width: 56px; height: 56px; object-fit: contain; }
   .edu .when { font-family: var(--display); font-variant-numeric: tabular-nums; color: var(--muted); font-size: 0.92rem; white-space: nowrap; align-self: start; padding-top: 0.25rem; }
   @media (max-width: 640px) {
-    .edu { grid-template-columns: 84px minmax(0, 1fr); align-items: start; }
-    .edu img { width: 84px; height: 56px; padding: 4px 6px; }
+    .edu { grid-template-columns: 48px minmax(0, 1fr); align-items: start; }
+    .edu img { width: 48px; height: 48px; }
     .edu .when { grid-column: 2; padding-top: 0.2rem; }
   }
-  @media print { .edu { grid-template-columns: 72px minmax(0, 1fr) auto; } .edu img { width: 72px; height: 46px; } }
+  @media print { .edu { grid-template-columns: 36px minmax(0, 1fr) auto; } .edu img { width: 36px; height: 36px; } }
   #about p + p { margin-top: 1rem; }
 
   footer {
@@ -286,7 +286,7 @@
     <section id="education">
       <h2>Education</h2>
       <div class="edu">
-        <img src="logos/clemson-v2.png" alt="Clemson University logo" loading="lazy">
+        <img src="logos/clemson-v3.png" alt="Clemson University logo" width="56" height="56" loading="lazy">
         <div>
           <h3>PhD in Mechanical Engineering</h3>
           <p class="sub">Clemson University</p>
@@ -294,7 +294,7 @@
         <span class="when">2026–now</span>
       </div>
       <div class="edu">
-        <img src="logos/ulsan-v2.png" alt="University of Ulsan logo" loading="lazy">
+        <img src="logos/ulsan-v3.png" alt="University of Ulsan logo" width="56" height="56" loading="lazy">
         <div>
           <h3>M.Sc. in Mechanical Engineering</h3>
           <p class="sub">University of Ulsan</p>
@@ -302,7 +302,7 @@
         <span class="when">2023–2025</span>
       </div>
       <div class="edu">
-        <img src="logos/kuet-v2.png" alt="Khulna University of Engineering &amp; Technology logo" loading="lazy">
+        <img src="logos/kuet-v3.png" alt="Khulna University of Engineering &amp; Technology logo" width="56" height="56" loading="lazy">
         <div>
           <h3>B.Sc. in Mechanical Engineering</h3>
           <p class="sub">Khulna University of Engineering &amp; Technology</p>
